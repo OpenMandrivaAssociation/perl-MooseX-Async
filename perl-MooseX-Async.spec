@@ -11,9 +11,10 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/MooseX/%{upstream_name}-%{upstream_version}.tar.gz
 
-
+BuildRequires: perl(Moose)
+BuildRequires: perl(MooseX::AttributeHelpers)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 MooseX::Async is a set of Metaclasses for MooseX::POE and it's siblings.
@@ -41,5 +42,4 @@ rm -rf %buildroot
 %doc ._Changes Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
